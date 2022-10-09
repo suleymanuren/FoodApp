@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/foodListFragment">
+
+    <fragment
+        android:id="@+id/foodListFragment"
+        android:name="FoodListFragment"
+        android:label="FoodListFragment"
+        tools:layout="@layout/fragment_food_list">
+        <argument
+            android:name="foodModel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_foodListFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="FoodDetailFragment"
+        android:label="FoodDetailFragment"
+        tools:layout="@layout/fragment_food_detail" >
+        <argument
+            android:name="foodModel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_foodDetailFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_order_page"
+        android:id="@+id/foodOrderFragment"
+        android:name="FoodOrderFragment"
+        android:label="FoodOrderFragment">
+        <argument
+            android:name="foodModel"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodSearchFragment"
+        android:name="FoodSearchFragment"
+        android:label="FoodSearchFragment"
+        tools:layout="@layout/fragment_search_food"/>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="UserProfileFragment"
+        android:label="UserProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+</navigation>

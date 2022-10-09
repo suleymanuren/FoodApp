@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SearchViewStyle">
+
+        <item name="android:textSize">12sp</item>
+        <item name="android:hint">What do you need?</item>
+    </style>
+
+</resources>
